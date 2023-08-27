@@ -117,7 +117,7 @@ class TestFileStorage(unittest.TestCase):
 
 class TestFileStorage(unittest.TestCase):
     """ test for count and get"""
-    b = State()
+    b = State(name='California')
     b.save()
     fs_f = inspect.getmembers(FileStorage, inspect.isfunction)
 
