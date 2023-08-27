@@ -95,7 +95,7 @@ class TestDbstorage(unittest.TestCase):
     s = State()
     models.storage.new(s)
     s.save()
-    
+
     def test_dbs_count(self):
         for funciones in self.dbs_f:
             if funciones[0] == 'count':
