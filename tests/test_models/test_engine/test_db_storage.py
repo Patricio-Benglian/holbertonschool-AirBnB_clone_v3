@@ -90,10 +90,12 @@ class TestFileStorage(unittest.TestCase):
 
 class TestDbstorage(unittest.TestCase):
     """ test for count and get"""
-    """ s = State()
-    s.save() """
     dbs_f = inspect.getmembers(DBStorage, inspect.isfunction)
 
+    s = State()
+    models.storage.new(s)
+    s.save()
+    
     def test_dbs_count(self):
         for funciones in self.dbs_f:
             if funciones[0] == 'count':
