@@ -92,7 +92,7 @@ class TestDbstorage(unittest.TestCase):
     """ test for count and get"""
     dbs_f = inspect.getmembers(DBStorage, inspect.isfunction)
 
-    s = State()
+    s = State(name="California")
     models.storage.new(s)
     s.save()
 
