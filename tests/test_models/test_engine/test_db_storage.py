@@ -90,6 +90,8 @@ class TestFileStorage(unittest.TestCase):
 
 class TestDbstorage(unittest.TestCase):
     """ test for count and get"""
+    s = State()
+    s.save()
     dbs_f = inspect.getmembers(DBStorage, inspect.isfunction)
 
     def test_dbs_count(self):
